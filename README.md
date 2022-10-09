@@ -9,7 +9,7 @@ Este trabalho visa entender a natureza da relação linear entre os dados.
 
 Faremos a análise de correlação, que é utilizada para medir a intensidade de associação de duas variáveis (Relação Linear), e, também a análise de regressão, que é utilizada para prever valores de uma variável dados os valores de outra. A correlação foca primeiramente na associação das variáveis, enquanto a regressão é designada para ajudar a fazer previsões.
 
-Considere os três Grupos de Dados (datasets) do arquivo [dataset.txt](dataset.txt)
+Considere os três Grupos de Dados (datasets) do arquivo [dataset.txt](datasets/dataset.txt)
 
 A melhor maneira para visualizar a relação entre os dados é gerando um Diagrama de Dispersão (utilize o comando scatter – veja também as bibliotecas plotly (para gráficos interativos), numpy, matplotlib e math do Python). O Diagrama de Dispersão representa o quanto uma variável é afetada por outra.
 
@@ -26,3 +26,13 @@ Onde,
    3. Trace a linha da regressão no Gráfico de Dispersão (veja a função plot)
    4. Mostre os coeficientes de correlação e regressão no Gráfico de Dispersão (utilize a função title)
 3. Qual dos datasets não é apropriado para regressão linear?
+
+## Tarefa 3: Análise de Correlação e Regressão Linear com dados reais
+Escolha uma base de dados (sugestão: Kaggle ou base [Dados Plano de Saúde USA.xls](datasets/Dados%20Plano%20de%20Saúde%20USA.xlsx) em anexo) para análise de correlação e regressão linear. Separe a base de dados ao meio e utilizando as funções (correlação e regressão) da Tarefa 2:
+
+Faça um script no Python onde para cada dataset, faça os seguintes comandos:
+
+- Faça um Gráfico de Dispersão (veja função scatter).
+- Calcule o coeficiente de correlação.
+- Trace a linha da regressão no Gráfico de Dispersão (veja a função plot)
+- Mostre os coeficientes de correlação e regressão no Gráfico de Dispersão (utilize a função title)

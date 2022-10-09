@@ -18,6 +18,8 @@ data = {'x': [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 19],
         'y': [6.58, 5.76, 7.71, 8.84, 8.47, 7.04, 5.25, 5.56, 7.91, 6.89, 12.50]}
 dataFrame3 = pd.DataFrame(data)
 
+dataFrame4 = pd.read_excel('datasets/Dados Plano de Saúde USA.xlsx')
+
 
 # Calcula o coeficiente de correlação a partir de dois vetores unidimensionais
 def correlacao(x, y):
@@ -84,12 +86,31 @@ def analise_dataframe_3():
     grafico_regressao_linear(dataFrame3)
 
 
+def analise_dados_plano_de_saude():
+    print(
+        "Análise da planilha de dados de saúde (A função utilizada será a idade da pessoa em relação o  valor de cobrança):\n")
+    print("Gráfico de dispersão: ")
+    grafico_dispersao(dataFrame4["Valor Cobrança"], dataFrame4["Idade"])
+    result = correlacao(dataFrame4["Valor Cobrança"], dataFrame4["Idade"])
+    print("Correlação:")
+    print(result)
+    print("\nRegressão:")
+    result = regressao(dataFrame4["Valor Cobrança"], dataFrame4["Idade"])
+    print(result)
+    print("\nGráfico regressão:")
+    grafico = px.scatter(dataFrame4, x="Valor Cobrança", y="Idade", trendline="ols",
+                         title="Gráfico de regressão linear")
+    grafico.show()
+
+
 def main():
     analise_dataframe_1()
     print("\n---------------------------\n")
     analise_dataframe_2()
     print("\n---------------------------\n")
     analise_dataframe_3()
+    print("\n---------------------------\n")
+    analise_dados_plano_de_saude()
 
 
 main()
